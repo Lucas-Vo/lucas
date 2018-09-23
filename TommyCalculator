@@ -1,18 +1,23 @@
 let pmgd = [1,2,3,4]
-let x = null;
-let y = null;
+let pmgda = ['+','-','*','/']
+let x;
+let y;
 let pmgdf = [
     function add(x,y) {
-        console.log(x + y);
+       let l = x + y;
+       return l;    
     },
     function subtract(x,y) {
-        console.log(x - y);
+        let m = x - y;
+        return m;
     },
     function multiply(x,y) {
-        console.log(x * y);
+        let n = x * y;
+        return n;
     },
     function divide(x,y) {
-        console.log(x / y);
+        let o = x / y;
+        return o;
     }
 ]
 let num1 = prompt('first digit','e.g 5');
@@ -23,51 +28,63 @@ alert('1.add, 2.subtract, 3.multiply, 4.divide');
 let operation = prompt('type of operation', 'e.g 1');
 var Operation = parseInt(operation);
 
+
 if(Operation == 1) {
-    pmgdf[0](a,b);
+    console.log(pmgdf[0](a,b));
      let num3 = prompt('third digit','e.g 7');
      var c = parseInt(num3);
      var operation2 = prompt('type of operation', 'e.g 1');
      var Operation2 = parseInt(operation2);
      for(i = 0;i < pmgd.length; i++) {
         if(operation2 == pmgd[i]){
-            pmgdf[i](a+b,c);
+            console.log(pmgdf[i](a+b,c));
         }
     }
 } else if(Operation == 2) {
-    pmgdf[1](a,b);
+    console.log(pmgdf[1](a,b));
     let num3 = prompt('third digit','e.g 7');
     var c = parseInt(num3);
     var operation2 = prompt('type of operation', 'e.g 1');
     var Operation2 = parseInt(operation2);
     for(i = 0;i < pmgd.length; i++) {
        if(operation2 == pmgd[i]){
-           pmgdf[i](a-b,c);
+           console.log(pmgdf[i](a-b,c));
        }
    }
 } else if(Operation == 3) {
-    pmgdf[2](a,b);
+    console.log(pmgdf[2](a,b));
     let num3 = prompt('third digit','e.g 7');
     var c = parseInt(num3);
     var operation2 = prompt('type of operation', 'e.g 1');
     var Operation2 = parseInt(operation2);
     for(i = 0;i < pmgd.length; i++) {
         if(Operation2 == pmgd[i]){
-            pmgdf[i](a*b,c);
+            console.log(pmgdf[i](a*b,c));
         } 
     }
 } else if(Operation == 4) {
-    pmgdf[3](a,b);
+    console.log(pmgdf[3](a,b));
     let num3 = prompt('third digit','e.g 7');
     var c = parseInt(num3);
     var operation2 = prompt('type of operation', 'e.g 1');
     var Operation2 = parseInt(operation2);
     for(i = 0;i < pmgd.length; i++) {
        if(operation2 == pmgd[i]){
-           pmgdf[i](a/b,c);
+           console.log(pmgdf[i](a/b,c));
        } 
    }
 } else {
     console.log('excuse me what the fuck');
 }
-console.log('your answer is', <HELP>, ' bitch');
+function define() {
+    let le = pmgdf[Operation2-1](pmgdf[Operation-1](a,b),c);
+    return le;
+}
+
+document.write(a,' ',pmgda[Operation-1],' ',b,' ',pmgda[Operation2-1],' ',c,' ','=',' ',define());
+document.write("<br>");
+document.write(' The answer is ',define(),' you dumb ugly bitch.');
+if(Operation2 == 3 || Operation2 == 4 && Operation < 3) {
+    document.write("<br>");
+    document.write("Eat shit you little pussy, I don't give a fuck about the order of operations.");
+}
